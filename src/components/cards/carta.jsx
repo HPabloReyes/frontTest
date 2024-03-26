@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./carta.css";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/userSlice";
 
 export default function Carta({
   nombre,
@@ -8,12 +10,24 @@ export default function Carta({
   description,
   descuento,
 }) {
+  const data = [nombre, producto, precio, description, descuento];
+  const dispatch = useDispatch();
+
+  const HandleClick = () => {
+    const nuevoCarrito = data;
+    dispatch(addProduct(nuevoCarrito));
+  };
+
   return (
     <>
       <div className="cartaContainer">
         <div className="cartaWrapper">
           <div className="carta">
-            <img src={`./${producto}.png`} alt={nombre}></img>
+            <img
+              className="producto"
+              src={`./${producto}.png`}
+              alt={nombre}
+            ></img>
             <div className="flex">
               <b>
                 <p>{nombre}</p>
@@ -24,7 +38,7 @@ export default function Carta({
               <p>{description}</p>
               <p style={{ textDecoration: "line-through" }}>${descuento}</p>
             </div>
-            <img style={{ cursor: "pointer" }} src="./Rating.png"></img>
+            <img className="estrellas" src="./Rating.png"></img>
           </div>
           <div className="overlay">
             <div className="c1">
@@ -37,7 +51,7 @@ export default function Carta({
             </div>
             <div className="c2">
               <b>
-                <p>Agregar</p>
+                <p onClick={() => HandleClick(data)}>Agregar</p>
               </b>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import "./cards.css";
 import Carta from "./carta";
+import "./cards.css";
 
 export default function Cards() {
   return (

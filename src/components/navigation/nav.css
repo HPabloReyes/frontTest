@@ -35,6 +35,20 @@
   height: 22px; /* Ajusta la altura para que se centre verticalmente */
 }
 
+.contador {
+  position: absolute;
+  top: -30px;
+  right: -5px;
+  background-color: #ff8e8e;
+  border-radius: 50%;
+  width: 20px; /* Doble del radio del círculo */
+  height: 20px; /* Doble del radio del círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+}
 @media only screen and (max-width: 600px) {
   /* .container {
     flex-direction: column;

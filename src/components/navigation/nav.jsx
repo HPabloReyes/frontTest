@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import "./nav.css";
 
 export default function Nav() {
+  const carrito = useSelector((state) => state.user.carrito);
+
   const menu = ["productos", "promociones", "nosotros"];
-  const secondMenu = ["lupa", "perfil", "bolsa"];
+  const secondMenu = ["lupa", "perfil"];
+
   return (
     <div className="container">
       <div>
@@ -45,6 +49,17 @@ export default function Nav() {
               <img src={`/${e}.png`} alt={`${e} image`}></img>
             </li>
           ))}
+          <li className="li2">
+            <div style={{ position: "relative" }}>
+              <img src="/bolsa.png" alt="Bolsa image"></img>
+              <p
+                style={{ display: carrito.length === 0 ? "none" : "flex" }}
+                className="contador"
+              >
+                {carrito.length}
+              </p>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
