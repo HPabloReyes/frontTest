@@ -13,7 +13,7 @@ export default function Nav() {
           alt="Logo"
         ></img>
       </div>
-      <div>
+      <div className="nav">
         <ul>
           {menu.map((item, index) => (
             <li className="li" key={index}>
@@ -26,7 +26,7 @@ export default function Nav() {
           ))}
         </ul>
       </div>
-      <div>
+      <div className="second">
         <ul>
           {secondMenu.map((e, index) => (
             <li className="li2" key={index}>

@@ -4,6 +4,20 @@
   margin: 8px;
 }
 
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .nav {
+    margin-left: -20px;
+  }
+}
+
 .container ul {
   list-style: none;
   display: flex;

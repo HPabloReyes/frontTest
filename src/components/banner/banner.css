@@ -1,0 +1,7 @@
+.banner {
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Estilos para dispositivos móviles con un ancho máximo de 600px */
+}

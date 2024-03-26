@@ -4,6 +4,7 @@ import Cards from "./components/cards/cards";
 import Nav from "./components/navigation/nav";
 
 function App() {
+  document.title = "Blife - Test";
   return (
     <>
       <Nav></Nav>

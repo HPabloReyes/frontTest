@@ -15,7 +15,9 @@ export default function Carta({
           <div className="carta">
             <img src={`./${producto}.png`} alt={nombre}></img>
             <div className="flex">
-              <h7>{nombre}</h7>
+              <b>
+                <p>{nombre}</p>
+              </b>
               <b>${precio}</b>
             </div>
             <div className="flex">

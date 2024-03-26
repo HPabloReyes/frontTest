@@ -5,3 +5,10 @@
   flex-wrap: wrap;
   margin: 100px;
 }
+
+@media only screen and (max-width: 600px) {
+  .main {
+    margin: auto;
+    margin-top: 20px;
+  }
+}
