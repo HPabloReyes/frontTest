@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px;
+}
+
+.container ul {
+  list-style: none;
+  display: flex;
+}
+
+.li {
+  margin: 0 6px 0 6px;
+  cursor: pointer;
+}
+
+.li p {
+  margin: 0;
+}
+
+.li2 {
+  margin: 0 6px 0 6px;
+  cursor: pointer;
+}
+
+.li :hover {
+  background-color: #eda836;
+  border-radius: 45px;
+}
+
+.centered-text {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin: 0; /* Elimina el margen para asegurar el centrado */ /* Centra verticalmente */
+  width: 117px;
+  height: 22px; /* Ajusta la altura para que se centre verticalmente */
+}

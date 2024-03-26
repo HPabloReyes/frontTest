@@ -1,0 +1,147 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.justFlex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.justFlex p {
+  margin: 0;
+}
+
+.cartaWrapper {
+  background-color: white;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  position: relative; /* Para que sirva como ancestro del overlay */
+}
+
+.cartaContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: solid 1px #e1e1e1;
+  border-radius: 24px;
+  width: 340px;
+  height: 514px;
+}
+
+.cartaContainer:hover .carta {
+  transform: translateY(
+    -30px
+  ); /* Mueve la carta hacia arriba cuando se pasa el mouse */
+}
+
+.cartaContainer:hover .carta img {
+  transform: scale(1.2);
+}
+
+.cartaContainer:hover .overlay {
+  opacity: 1;
+}
+
+.cartaContainer:hover .slider {
+  transform: translateY(-15px);
+}
+
+.carta {
+  padding: 20px 20px 0 20px;
+  transition: transform 0.3s ease;
+}
+
+.carta img {
+  transition: all 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 24px;
+  width: 340px;
+  padding-top: 25px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.c1 {
+  margin: 0 0 20px 20px;
+}
+
+.c2 {
+  margin: 0 20px 20px;
+  width: 90px;
+  height: 31px;
+  cursor: pointer;
+  background-color: white;
+  border: solid #eda836;
+  border-radius: 20px;
+  padding: 8px 22px;
+  display: flex; /* Para que los elementos hijos se posicionen en fila */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+.c2 p {
+  margin: 0; /* Ajusta el margen del párrafo */
+}
+
+.slider {
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.3s ease;
+  top: 0;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  margin: auto; /* Esto centra el elemento horizontalmente */
+}
+
+.f1 {
+  width: 62px;
+  height: 31px;
+  position: absolute;
+  transition: all 0.3s ease;
+  top: 30px;
+  bottom: 0;
+  left: 87%;
+  right: 0;
+}
+
+.f2 {
+  width: 53px;
+  height: 31px;
+  position: absolute;
+  transition: all 0.3s ease;
+  top: 66px;
+  bottom: 0;
+  left: 90%;
+  right: 0;
+}
+
+.justFlex img {
+  width: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.flex b p {
+  margin: 0;
+}
+
+.flex p {
+  font-size: small;
+}
+
+.flex h7 {
+  font-weight: bold;
+}

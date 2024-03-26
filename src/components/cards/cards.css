@@ -1,0 +1,7 @@
+.main {
+  margin: 8px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 100px;
+}
