@@ -16,7 +16,19 @@ export default function Nav() {
       <div className="nav">
         <ul>
           {menu.map((item, index) => (
-            <li className="li" key={index}>
+            <li
+              className="li"
+              key={index}
+              style={
+                index === 1
+                  ? {
+                      backgroundColor: "#eda836",
+                      borderRadius: 45,
+                      paddingBottom: 5,
+                    }
+                  : null
+              }
+            >
               <div className="centered-text">
                 <b>
                   <p>{item}</p>

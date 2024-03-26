@@ -23,10 +23,8 @@
   cursor: pointer;
 }
 
-.li :hover {
-  background-color: #eda836;
-  border-radius: 45px;
-}
+/* background-color: ;
+  border-radius: 45px; */
 
 .centered-text {
   display: flex;
