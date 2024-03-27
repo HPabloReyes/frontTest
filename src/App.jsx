@@ -1,6 +1,6 @@
 import "./App.css";
-import Banner from "./components/banner/banner";
-import Cards from "./components/cards/cards";
+import React from "react";
+import AppRouter from "./router/AppRouter";
 import Nav from "./components/navigation/nav";
 
 function App() {
@@ -8,8 +8,7 @@ function App() {
   return (
     <>
       <Nav></Nav>
-      <Banner></Banner>
-      <Cards></Cards>
+      <AppRouter></AppRouter>
     </>
   );
 }

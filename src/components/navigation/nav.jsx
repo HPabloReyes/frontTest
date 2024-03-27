@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+
 import "./nav.css";
 
 export default function Nav() {
@@ -11,11 +13,13 @@ export default function Nav() {
   return (
     <div className="container">
       <div>
-        <img
-          style={{ width: 165.33, height: 50, cursor: "pointer" }}
-          src="./Group.png"
-          alt="Logo"
-        ></img>
+        <NavLink to={"/"}>
+          <img
+            style={{ width: 165.33, height: 50, cursor: "pointer" }}
+            src="./Group.png"
+            alt="Logo"
+          ></img>
+        </NavLink>
       </div>
       <div className="nav">
         <ul>
@@ -51,13 +55,15 @@ export default function Nav() {
           ))}
           <li className="li2">
             <div style={{ position: "relative" }}>
-              <img src="/bolsa.png" alt="Bolsa image"></img>
-              <p
-                style={{ display: carrito.length === 0 ? "none" : "flex" }}
-                className="contador"
-              >
-                {carrito.length}
-              </p>
+              <NavLink to={"/shops"}>
+                <img src="/bolsa.png" alt="Bolsa image"></img>
+                <p
+                  style={{ display: carrito.length === 0 ? "none" : "flex" }}
+                  className="contador"
+                >
+                  {carrito.length}
+                </p>
+              </NavLink>
             </div>
           </li>
         </ul>

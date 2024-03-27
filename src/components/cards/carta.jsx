@@ -10,12 +10,11 @@ export default function Carta({
   description,
   descuento,
 }) {
-  const data = [nombre, producto, precio, description, descuento];
+  const data = [{ nombre, producto, precio, description, descuento }];
   const dispatch = useDispatch();
 
   const HandleClick = () => {
-    const nuevoCarrito = data;
-    dispatch(addProduct(nuevoCarrito));
+    dispatch(addProduct(data));
   };
 
   return (
@@ -49,9 +48,9 @@ export default function Carta({
                 <img src="./Vector-2.png"></img>
               </div>
             </div>
-            <div className="c2">
+            <div className="c2" onClick={() => HandleClick(data)}>
               <b>
-                <p onClick={() => HandleClick(data)}>Agregar</p>
+                <p>Agregar</p>
               </b>
             </div>
           </div>

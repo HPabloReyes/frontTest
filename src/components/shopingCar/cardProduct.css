@@ -1,0 +1,16 @@
+.cardContainer {
+  border: solid 1px #e1e1e1;
+  border-radius: 24px;
+  padding: 10px;
+  margin: 10px 5px;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -40px;
+}
+
+.infoContainer p {
+  font-size: small;
+}

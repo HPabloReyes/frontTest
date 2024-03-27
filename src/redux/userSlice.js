@@ -9,7 +9,7 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     addProduct: (state, action) => {
-      state.carrito.push(action.payload);
+      state.carrito = [...state.carrito, ...action.payload];
     },
   },
 });
