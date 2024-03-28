@@ -7,7 +7,7 @@ import "./nav.css";
 export default function Nav() {
   const carrito = useSelector((state) => state.user.carrito);
 
-  const menu = ["productos", "promociones", "nosotros"];
+  const menu = ["Productos", "Promociones", "Nosotros"];
   const secondMenu = ["lupa", "perfil"];
 
   return (
@@ -38,7 +38,7 @@ export default function Nav() {
               }
             >
               <div className="centered-text">
-                {index === 1 ? (
+                {index === 0 ? (
                   <NavLink to="/" className={"active-link"}>
                     {item}
                   </NavLink>
