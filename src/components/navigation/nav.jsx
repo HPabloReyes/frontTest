@@ -38,9 +38,15 @@ export default function Nav() {
               }
             >
               <div className="centered-text">
-                <b>
-                  <p>{item}</p>
-                </b>
+                {index === 1 ? (
+                  <NavLink to="/" className={"active-link"}>
+                    {item}
+                  </NavLink>
+                ) : (
+                  <b>
+                    <p>{item}</p>
+                  </b>
+                )}
               </div>
             </li> // Añadí un key único para cada elemento de la lista
           ))}

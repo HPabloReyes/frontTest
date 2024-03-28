@@ -9,6 +9,12 @@
   display: flex;
 }
 
+.active-link {
+  font-weight: bold;
+  text-decoration: none; /* Elimina la decoración predeterminada del enlace */
+  color: #000; /* Cambia el color del texto para los enlaces activos */
+}
+
 .li {
   margin: 0 6px 0 6px;
   cursor: pointer;
@@ -49,7 +55,7 @@
   color: white;
   font-weight: bolder;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   /* .container {
     flex-direction: column;
     align-items: center;

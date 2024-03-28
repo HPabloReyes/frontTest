@@ -1,39 +1,32 @@
 .mainContainer {
   display: flex;
-  justify-content: center;
-}
-
-.fl {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 50px;
 }
 
 .cardScrollContainer {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
   margin: 0 5px; /* Márgenes laterales */
+  flex: 3;
 }
 
-.cardContainer {
+.cInfo {
+  flex: 1;
+  max-height: 300px;
+  min-width: 350px;
+  margin: 10px 10px 10px 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
   border: solid 1px #e1e1e1;
   border-radius: 24px;
   padding: 10px;
-  margin-right: 10px; /* Margen entre cartas */
 }
 
-.cardScrollContainer::-webkit-scrollbar {
-  width: 8px; /* Ancho de la barra de desplazamiento */
-}
-
-.cardScrollContainer::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3); /* Color del thumb */
-  border-radius: 4px; /* Bordes redondeados */
-}
-
-.cardScrollContainer::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.5); /* Color del thumb al pasar */
+.fl {
+  /*Estilos del Contador del total*/
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
 }
 
 .boton {
@@ -57,4 +50,20 @@
 
 .btn:hover {
   background-color: #ff9a9a; /* Color de fondo al pasar */
+}
+
+@media only screen and (max-width: 720px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cInfo {
+    order: -1; /* Cambia el orden del elemento cInfo para que aparezca primero */
+  }
 }

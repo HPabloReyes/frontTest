@@ -10,7 +10,7 @@ export default function CardProduct({
   return (
     <>
       <div className="cardContainer">
-        <div>
+        <div className="img">
           <img src={`./${producto}.png`} />
           <div>
             <div className="infoContainer">

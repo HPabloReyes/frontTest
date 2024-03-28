@@ -29,10 +29,14 @@ export default function ShopingCar() {
               <h1>Aun no has agregado productos a tu Lista de compras</h1>
             )}
           </div>
-        </div>
-
-        <div className="boton">
-          <button className="btn">Comprar</button>
+          <div className="cInfo">
+            <div className="info">
+              <p>Aqui va la info del producto</p>
+            </div>
+            <div className="boton">
+              <button className="btn">Comprar</button>
+            </div>
+          </div>
         </div>
       </div>
     </>
