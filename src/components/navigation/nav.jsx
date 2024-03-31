@@ -6,6 +6,7 @@ import "./nav.css";
 
 export default function Nav() {
   const carrito = useSelector((state) => state.user.carrito);
+  const usuario = useSelector((state) => state.user.usuario);
 
   const menu = ["Productos", "Promociones", "Nosotros"];
   const secondMenu = ["lupa", "perfil"];
@@ -54,11 +55,18 @@ export default function Nav() {
       </div>
       <div className="second">
         <ul>
-          {secondMenu.map((e, index) => (
-            <li className="li2" key={index}>
-              <img src={`/${e}.png`} alt={`${e} image`}></img>
-            </li>
-          ))}
+          {secondMenu.map((e, index) =>
+            index === 1 && Object.keys(usuario).length != 0 ? (
+              <img
+                style={{ width: 26, height: 26, borderRadius: 50 }}
+                src={usuario.profileObj.imageUrl}
+              ></img>
+            ) : (
+              <li className="li2" key={index}>
+                <img src={`/${e}.png`} alt={`${e} image`} />
+              </li>
+            )
+          )}
           <li className="li2">
             <div style={{ position: "relative" }}>
               <NavLink to={"/shops"}>

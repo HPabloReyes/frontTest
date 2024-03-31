@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./carta.css";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/userSlice";

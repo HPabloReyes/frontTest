@@ -1,9 +1,12 @@
 import CardProduct from "./cardProduct";
 import { useSelector } from "react-redux";
+import React from "react";
 import "./shopingCar.css";
+import Login from "../login/login";
 
 export default function ShopingCar() {
   const data = useSelector((state) => state.user.carrito);
+  const usuario = useSelector((state) => state.user.usuario);
 
   return (
     <>
@@ -31,10 +34,14 @@ export default function ShopingCar() {
           </div>
           <div className="cInfo">
             <div className="info">
-              <p>Aqui va la info del producto</p>
+              <p>Aquí va la información de la compra</p>
             </div>
             <div className="boton">
-              <button className="btn">Comprar</button>
+              {Object.keys(usuario).length != 0 ? (
+                <button className="btn">Comprar</button>
+              ) : (
+                <Login></Login>
+              )}
             </div>
           </div>
         </div>
