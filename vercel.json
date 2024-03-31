@@ -1,0 +1,5 @@
+{
+  "build": {
+    "postinstall": "npm i react-google-login --force"
+  }
+}
