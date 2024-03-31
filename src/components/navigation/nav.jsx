@@ -58,8 +58,9 @@ export default function Nav() {
           {secondMenu.map((e, index) =>
             index === 1 && Object.keys(usuario).length != 0 ? (
               <img
+                key={index}
                 style={{ width: 26, height: 26, borderRadius: 50 }}
-                src={usuario.profileObj.imageUrl}
+                src={usuario.picture}
               ></img>
             ) : (
               <li className="li2" key={index}>
