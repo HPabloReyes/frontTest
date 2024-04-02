@@ -1,7 +1,7 @@
 import React from "react";
-import "./carta.css";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/userSlice";
+import "./carta.css";
 
 export default function Carta({
   nombre,
@@ -13,7 +13,7 @@ export default function Carta({
   const data = [{ nombre, producto, precio, description, descuento }];
   const dispatch = useDispatch();
 
-  const HandleClick = () => {
+  const HandleClick = (data) => {
     dispatch(addProduct(data));
   };
 

@@ -17,11 +17,12 @@ export default function Login() {
   //   };
 
   return (
-    <div>
+    <div className="containerLog">
       <b>
-        <p>Para poder realizar su compra primero debe iniciar sesión primero</p>
-        <div>
+        <p>Para poder realizar su compra primero necesita iniciar sesión</p>
+        <div className="googleButton">
           <GoogleLogin
+            logo_alignment={"center"}
             onSuccess={(credentialResponse) => {
               const decoded = jwtDecode(credentialResponse?.credential);
               dispatch(setUser(decoded));

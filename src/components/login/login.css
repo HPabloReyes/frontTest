@@ -1,0 +1,12 @@
+.containerLog {
+  text-align: justify;
+}
+
+.containerLog p {
+  padding: 5px;
+}
+
+.googleButton {
+  display: flex;
+  justify-content: center;
+}
